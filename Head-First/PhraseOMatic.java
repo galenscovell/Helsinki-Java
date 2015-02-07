@@ -1,31 +1,37 @@
 
-// Small program that creates a funny phrase from a list of strings
+// Small program that creates a funny phrase from a list of strings :]
 
 
 public class PhraseOMatic {
   public static void main (String[] args) {
 
-    // Three sets of words to choose from
-    String[] wordListOne = {"Java", "Python", "C", "Ruby", "JavaScript", "HTML", "CSS"};
+    String[] wordListOne = {"24/7", "multi-paradigm", "B-to-B", "win-win", "front-end", "web-based", "pervasive", "smart", "six-sigma", "dynamic", "critical-path", "nodeJS", "Hadoop", "JavaScript"};
 
-    String[] wordListTwo = {"Galen", "Ashley", "David", "Cheri", "Chris", "Dash", "Kyle", "Michael"};
+    String[] wordListTwo = {"empowered", "sticky", "oriented", "centric", "distributed", "clustered", "branded", "outside-the-box", "positioned", "focused", "aligned", "targeted", "accelerated"};
 
-    String[] wordListThree = {"Philosopher", "Savior", "Politician", "Programmer", "Engineer", "Artist"};
+    String[] wordListThree = {"process", "tipping-point", "solution", "architecture", "core competency", "strategy", "mindshare", "portal", "space", "vision", "paradigm", "mission"};
 
-    // Find amount of words in each list
     int oneLength = wordListOne.length;
     int twoLength = wordListTwo.length;
     int threeLength = wordListThree.length;
 
-    // Generate three random numbers
-    int rand1 = (int) (Math.random() * oneLength);
-    int rand2 = (int) (Math.random() * twoLength);
-    int rand3 = (int) (Math.random() * threeLength);
+    int i = 0;
+    while (i < 3) {
+      int rand1 = (int) (Math.random() * oneLength);
+      int rand2 = (int) (Math.random() * twoLength);
+      int rand3 = (int) (Math.random() * threeLength);
 
-    // Build a phrase :]
-    String phrase = wordListTwo[rand2] + ": the " + wordListOne[rand1] + " " + wordListThree[rand3];
+      String phrase = wordListOne[rand1] + " " + wordListTwo[rand2] + " " + wordListThree[rand3];
 
-    // Print phrase to console
-    System.out.println("What we need is " + phrase);
+      if (i == 0) {
+        System.out.println("\nWhat we need is a " + phrase + "!");
+      } else {
+        System.out.println("No, what we need is a " + phrase + "!");
+      }
+
+      i += 1;
+
+    }
+      
   }
 }
