@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Ex57 {
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<String>();
 
         Scanner input = new Scanner(System.in);
@@ -27,6 +27,6 @@ public class Ex57 {
         for (String word : words) {
             System.out.println(word);
         }
-        System.out.print("\n");
+        System.out.println("\n" + words + "\n");
     }
 }
