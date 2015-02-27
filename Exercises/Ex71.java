@@ -1,5 +1,5 @@
 
-/*
+/**
  * 'Smart' combines two arraylists, only adding value if not present in initial list.
  * >>> list1 = [1, 2, 3]
  * >>> list2 = [3, 3, 4]
