@@ -62,7 +62,7 @@ public class Counter {
 
     public void decrease(int amount) {
         if (amount > 0) {
-            if (this.check == true && this.value - amount < 0) {
+            if (this.check == true && this.value < amount) {
                 System.out.println("(Cannot decrement value past 0.)");
             } else {
                 this.value -= amount;
