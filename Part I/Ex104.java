@@ -7,23 +7,14 @@ import java.util.Arrays;
 
 public class Ex104 {
 
-    public static void selectionSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            swap(array, i, smallestFrom(array, i));
-            System.out.println(Arrays.toString(array));
-        }
-    }
-
     public static int smallestFrom(int[] array, int index) {
-        int smallest = sum(array);
+        int smallestValue = array[index];
         int smallestIndex = index;
-        for (int passes = 2; passes > 0; passes--) {
-            for (int i = index; i < array.length; i++) {
-                int value = array[i];
-                if (value < smallest) {
-                    smallest = value;
-                    smallestIndex = i;
-                }
+        for (int i = index; i < array.length; i++) {
+            int current = array[i];
+            if (current < smallestValue) {
+                smallestValue = current;
+                smallestIndex = i;
             }
         }
         return smallestIndex;
@@ -36,12 +27,11 @@ public class Ex104 {
         array[index2] = value1;
     }
 
-    public static int sum(int[] array) {
-        int total = 0;
-        for (int value : array) {
-            total += value;
+    public static void selectionSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            swap(array, i, smallestFrom(array, i));
+            System.out.println(Arrays.toString(array));
         }
-        return total;
     }
 
     public static void main(String[] args) {
